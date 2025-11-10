@@ -10,6 +10,7 @@ import Background from './src/components/Background';
 import SplashScreen from './SplashScreen';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
+import GraphSwitchButton from './src/components/GraphSwitchButton';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -47,6 +48,13 @@ function App() {
               </Text>
             </LinearGradient>
           </MaskedView>
+
+          {/* Graph Switch Button */}
+          <View style={styles.switchButtonContainer}>
+            <GraphSwitchButton
+              onToggle={(isGraph) => console.log('Graph mode:', isGraph)}
+            />
+          </View>
         </View>
       </SafeAreaView>
     </View>
@@ -97,6 +105,13 @@ const styles = StyleSheet.create({
     height: 200,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  switchButtonContainer: {
+    position: 'absolute',
+    width: 60,
+    height: 30,
+    left: screenWidth / 2 - 30,
+    top: screenHeight / 2 + 60,
   },
 });
 
