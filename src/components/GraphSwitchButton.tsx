@@ -25,8 +25,8 @@ const GraphSwitchButton: React.FC<GraphSwitchButtonProps> = ({
         {/* Outer Container */}
         <LinearGradient
           colors={['rgba(2, 35, 71, 0.1)', 'rgba(255, 255, 255, 0.1)']}
-          start={{x: 0, y: -0.05}}
-          end={{x: 0, y: 1.1571}}
+          start={{x: 0.5, y: -0.05}}
+          end={{x: 0.5, y: 1.1571}}
           style={styles.outerContainer}>
 
           {/* Graph icon on left - always visible */}
@@ -50,8 +50,8 @@ const GraphSwitchButton: React.FC<GraphSwitchButtonProps> = ({
           {/* Toggle Circle - moves left and right */}
           <LinearGradient
             colors={['rgba(2, 35, 71, 0.1)', 'rgba(255, 255, 255, 0.1)']}
-            start={{x: 0, y: -0.05}}
-            end={{x: 0, y: 1.1571}}
+            start={{x: 0.5, y: -0.05}}
+            end={{x: 0.5, y: 1.1571}}
             style={[
               styles.toggleCircle,
               isGraph ? styles.toggleLeft : styles.toggleRight,
